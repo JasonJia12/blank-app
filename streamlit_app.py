@@ -26,18 +26,17 @@ elif page == "Content":
 
     # Display each image with a text area for description
     images = [
-        ("/mnt/data/4S4WMAWDXR3424792--06.jpg", "Car interior - A late-night rest in a parked car."),
-        ("/mnt/data/Asiana-Business-Lounge-Seoul-Incheon-West-ICN-Review-6.jpeg", "Airport lounge - Awaiting a flight in the calm of a business lounge."),
-        ("/mnt/data/WechatIMG105.jpg", "My bedroom - A familiar and comforting place."),
-        ("/mnt/data/WechatIMG106.jpg", "Subway ride - An unexpected nap during transit."),
-        ("/mnt/data/WechatIMG110.jpg", "Lecture hall - Dozing off during a lecture."),
-        ("/mnt/data/WechatIMG111.jpg", "Library - A quiet study space that sometimes turns into a napping spot.")
+        ("https://i.imgur.com/R58idKL.jpeg", "Car interior - A late-night rest in a parked car."),
+        ("https://i.imgur.com/16aFnVG.jpeg", "Airport lounge - Awaiting a flight in the calm of a business lounge."),
+        ("https://i.imgur.com/xM495Zn.jpeg", "My bedroom - A familiar and comforting place."),
+        ("https://i.imgur.com/3oMhe3L.jpeg", "Subway ride - An unexpected nap during transit."),
+        ("https://i.imgur.com/KFlMkAv.jpeg", "Lecture hall - Dozing off during a lecture."),
+        ("https://i.imgur.com/cPHIx8j.jpeg", "Library - A quiet study space that sometimes turns into a napping spot.")
     ]
     
-    for img_path, default_description in images:
-        image = Image.open(img_path)
-        st.image(image, use_column_width=True)
-        st.text_area("Description", default_description, key=img_path)
+    for img_url, default_description in images:
+        st.image(img_url, use_column_width=True)
+        st.text_area("Description", default_description, key=img_url)
 
 # Writer's Memo Page
 elif page == "Writer's Memo":
